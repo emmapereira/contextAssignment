@@ -2,10 +2,10 @@
 
 #screen {
     width: 380px;
-    height: 600px;
     background-color: whitesmoke;
     margin: auto;
     padding-top: 18px;
+    padding-bottom: 100px;
 }
 
 #userInputTitle {
@@ -46,10 +46,13 @@ p {
     margin-left: 12px;
 }
 
-.altActivity {
-    height: 50px;
-    width: 200px,
+.altActivityImg {
+    width: 356px;
+    height: 200px;
+    object-fit: cover;
+    padding-inline: 12px;
 }
+
 
 #slider {
     padding: 10px;
