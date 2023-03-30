@@ -40,7 +40,7 @@ new p5(s2);
 var s3 = function (sketch) {
   sketch.setup = function () {
     let canvas3 = sketch.createCanvas(320, 320);
-    img3 = sketch.loadImage("pictures/pictures/The_last_of_us.webp");
+    img3 = sketch.loadImage("pictures/The_last_of_us.jpg");
     canvas3.parent("sketch-holder3");
   };
   sketch.draw = function () {
@@ -78,7 +78,7 @@ new p5(s4);
 var s5 = function (sketch) {
   sketch.setup = function () {
     let canvas5 = sketch.createCanvas(320, 320);
-    img5 = sketch.loadImage("pictures/Blind Guy McS..webp");
+    img5 = sketch.loadImage("pictures/Blind Guy McS.jpg");
     canvas5.parent("sketch-holder5");
   };
   sketch.draw = function () {
@@ -97,12 +97,12 @@ new p5(s5);
 var s6 = function (sketch) {
   sketch.setup = function () {
     let canvas6 = sketch.createCanvas(320, 320);
-    img6 = sketch.loadImage("pictures/Joey_eats.webp");
+    img6 = sketch.loadImage("pictures/Joey_eats.jpg");
     canvas6.parent("sketch-holder6");
   };
   sketch.draw = function () {
     img6.resize(320, 320);
-    sketch.image(6, 0, 0);
+    sketch.image(img6, 0, 0);
     sketch.filter(sketch.POSTERIZE, 3);
     sketch.filter(sketch.BLUR, 6);
   };
@@ -128,7 +128,7 @@ var s7 = function (sketch) {
 };
 
 // create a new instance of p5 and pass in the function for sketch 1
-new p5(s2);
+new p5(s7);
 
 //NUMBER 8
 
