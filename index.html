@@ -4,19 +4,50 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- This line removes any default padding and style.
-       You might only need one of these values set. -->
-    <style>
-      body {
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
     <script src="script.js"></script>
+    <div id="screen">
+      <h4 id="userInputTitle">Select your preferences</h4>
+      <div id="slider">
+        <label for="fader">Minutes: </label>
+        <input type="range" min="0" max="300" value="60" id="myRange" step="30" list="volsettings" oninput="rangeValue.innerText = this.value">
+        <datalist id="volsettings">
+          <option>0</option>
+          <option>30</option>
+          <option>60</option>
+          <option>90</option>
+          <option>120</option>
+          <option>150</option>
+          <option>180</option>
+          <option>210</option>
+          <option>240</option>
+          <option>270</option>
+          <option>300</option>
+          </datalist>
+          <p id="rangeValue">60</p>
+      </div>
+
+      <div>
+        <h5 id="userGoals">Choose your goals/to-do's of the day: </h5>
+        <div id="goalsDiv">
+          <input type="checkbox" id="goal1" name="goal1" value="Crochet">
+          <label for="goal1">Crochet</label><br>
+          <input type="checkbox" id="goal2" name="goal2" value="Read">
+          <label for="goal1">Read</label><br>
+          <input type="checkbox" id="goal3" name="goal3" value="Pet a dog">
+          <label for="goal1">Pet a dog</label><br>
+          <input type="checkbox" id="goal4" name="goal4" value="Paint">
+          <label for="goal1">Paint</label><br>
+          <input type="checkbox" id="goal5" name="goal5" value="Take a nap">
+          <label for="goal1">Nap</label><br>
+        </div>
+      </div>
+      <div id="saveDiv">
+        <button type="button" id="saveBtn">Save</button>
+      </div>
+    </div>
   </body>
 </html>
