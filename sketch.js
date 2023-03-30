@@ -27,8 +27,8 @@ var s2 = function (sketch) {
   sketch.draw = function () {
     img2.resize(320, 320);
     sketch.image(img2, 0, 0);
-    sketch.filter(sketch.POSTERIZE, 7);
-    sketch.filter(sketch.BLUR, 2);
+    sketch.filter(sketch.POSTERIZE, 6);
+    sketch.filter(sketch.BLUR, 1);
   };
 };
 
@@ -46,8 +46,8 @@ var s3 = function (sketch) {
   sketch.draw = function () {
     img3.resize(320, 320);
     sketch.image(img3, 0, 0);
-    sketch.filter(sketch.POSTERIZE, 6);
-    sketch.filter(sketch.BLUR, 3);
+    sketch.filter(sketch.POSTERIZE, 7);
+    //sketch.filter(sketch.BLUR, 1);
   };
 };
 
@@ -66,7 +66,7 @@ var s4 = function (sketch) {
     img4.resize(320, 320);
     sketch.image(img4, 0, 0);
     sketch.filter(sketch.POSTERIZE, 5);
-    sketch.filter(sketch.BLUR, 4);
+    sketch.filter(sketch.BLUR, 1);
   };
 };
 
@@ -85,7 +85,7 @@ var s5 = function (sketch) {
     img5.resize(320, 320);
     sketch.image(img5, 0, 0);
     sketch.filter(sketch.POSTERIZE, 4);
-    sketch.filter(sketch.BLUR, 5);
+    sketch.filter(sketch.BLUR, 2);
   };
 };
 
@@ -104,7 +104,7 @@ var s6 = function (sketch) {
     img6.resize(320, 320);
     sketch.image(img6, 0, 0);
     sketch.filter(sketch.POSTERIZE, 3);
-    sketch.filter(sketch.BLUR, 6);
+    sketch.filter(sketch.BLUR, 3);
   };
 };
 
@@ -123,7 +123,7 @@ var s7 = function (sketch) {
     img7.resize(320, 320);
     sketch.image(img7, 0, 0);
     sketch.filter(sketch.POSTERIZE, 2);
-    sketch.filter(sketch.BLUR, 7);
+    sketch.filter(sketch.BLUR, 5);
   };
 };
 
@@ -142,7 +142,7 @@ var s8 = function (sketch) {
     img8.resize(320, 320);
     sketch.image(img8, 0, 0);
     sketch.filter(sketch.POSTERIZE, 2);
-    sketch.filter(sketch.BLUR, 10);
+    sketch.filter(sketch.BLUR, 7);
   };
 };
 
