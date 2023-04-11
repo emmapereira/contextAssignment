@@ -7,22 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
     <script src="sketch.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <!-- This line removes any default padding and style.
-       You might only need one of these values set. -->
-    <style>
-      body {
-        padding: 0;
-        margin: 0;
-        /* overflow: hidden; */
-      }
-    </style>
+    <script src="https://kit.fontawesome.com/dab1174d9d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body id="screen">
     <!-- //samme linje, fastsat
   //Instagram-logo og en pil ned
   //et plus, et hjerte og en pil 
@@ -39,20 +27,23 @@
           />
         </td>
         <td>
-          <i class="fa fa-angle-down" aria-hidden="true"></i>
+          <i 
+          style="padding: 4px"
+          class="fa-solid fa-angle-down fa-lg" aria-hidden="true"></i>
         </td>
         <td>
           <i
-            style="margin-left: 70px"
-            class="fa fa-plus-square-o"
+            style="margin-left: 100px; padding: 5px;"
+            class="fa-regular fa-square-plus fa-lg"
             aria-hidden="true"
           ></i>
         </td>
         <td>
-          <i style="padding: 10px" class="fa fa-heart-o" aria-hidden="true"></i>
+          <i 
+          style="padding: 5px" class="fa-regular fa-heart fa-lg" aria-hidden="true"></i>
         </td>
         <td>
-          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+          <i style="padding: 5px" class="fa-regular fa-paper-plane fa-lg" aria-hidden="true"></i>
         </td>
       </tr>
     </table>
@@ -73,244 +64,176 @@
 </table> -->
 
     <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    <div>
       <table>
         <tr>
           <td>
             <img
-              style="margin-left: 7px; border-radius: 50%"
+              class="profileImage"
               src="pictures/Jennifer_Coolidge.jpeg"
               alt="Jennifer_Coolidge"
-              height="30px"
-              width="30px"
             />
           </td>
           <td>
-            <p style="font-size: 10px"><b>Tanya McQuoid</b> <br />Sicily</p>
+            <p class="imageHeader"> 
+              <b>Tanya McQuoid</b> <br />Sicily</p>
           </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 160px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
+          
+          <td> 
+            <i 
+            style="margin-left: 220px;"
+            class="fa-solid fa-ellipsis fa-lg"
+            aria-hidden="true">
+
+          </i>
           </td>
         </tr>
       </table>
 
       <!-- //et billede -->
       <img
+        class="instaImage"
         src="pictures/scooter-jennifer-coolidge.jpeg"
         alt="White Lotus"
-        height="320px"
-        width="320px"
       />
 
       <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
+      <table>
         <tr>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
+              style="padding: 4px"
+              class="fa-regular fa-heart fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
+              style="padding: 4px"
+              class="fa-regular fa-comment fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
+              style="padding: 4px"
+              class="fa-regular fa-paper-plane fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
+              style="margin-left: 260px; padding-right: 5px; padding-right: 5px"
+              class="fa-regular fa-bookmark fa-lg"
               aria-hidden="true"
             ></i>
           </td>
         </tr>
       </table>
       <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>543 likes</b>
-      </p>
+      <p class="likes">974 likes</p>
       <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+      <p class="imageHeader"> 
         <b>Tanya McQuoid </b>You've got this!
       </p>
       <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+      <p class="showComments">
         Show all 23 comments
       </p>
       <!-- //dit profilbillede "Write a comment..."  -->
       <table>
         <tr>
           <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
+            <img class="myProfileImage"
+              
               src="pictures/Jennifer_Coolidge.jpeg"
               alt="Jennifer_Coolidge"
-              height="15px"
-              width="15px"
+              
             />
           </td>
           <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
+            <p class="showComments"> Write a comment... </p>
           </td>
         </tr>
       </table>
       <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        5 days ago
-      </p>
+      <p class="time-since-posted">5 days ago</p>
     </div>
 
     <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    <div>
       <table>
         <tr>
           <td>
             <img
-              style="margin-left: 7px; border-radius: 50%"
+              class="profileImage"
               src="pictures/A_black_image.jpg.webp"
               alt="black"
-              height="30px"
-              width="30px"
+
             />
           </td>
           <td>
-            <p style="font-size: 10px">
+            <p class="imageHeader"> 
               <b>The Watcher</b> <br />657 Boulevard
             </p>
           </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 165px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
+          <td> 
+            <i 
+            style="margin-left: 220px;"
+            class="fa-solid fa-ellipsis fa-lg"
+            aria-hidden="true">
+
+            </i>
           </td>
         </tr>
       </table>
       <!-- //et billede -->
       <img
+        class="instaImage"
         src="pictures/watcher.jpeg"
         alt="The Watcher"
-        height="320px"
-        width="320px"
+        
       />
       <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
+      <table>
         <tr>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
+              style="padding: 4px"
+              class="fa-regular fa-heart fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
+              style="padding: 4px"
+              class="fa-regular fa-comment fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
+              style="padding: 4px"
+              class="fa-regular fa-paper-plane fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
+              style="margin-left: 260px; padding-right: 5px; padding-right: 5px"
+              class="fa-regular fa-bookmark fa-lg"
               aria-hidden="true"
             ></i>
           </td>
         </tr>
       </table>
       <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>30 likes</b>
+      <div class="likes">142 likes</div>
+      <p>
+        <!-- //brugernavn + caption -->
       </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+
+      <p class="imageHeader"> 
         <b>The Watcher </b> Dearest new neighbor at 657 Boulevard, <br />
         <br />
         Allow me to welcome you to the neighborhood. 657 <br />
@@ -319,1118 +242,236 @@
         <!-- and as it approaches its 110th birtday, I have been put in charge of watching and waiting for its second coming. <br> My grandfather watched the house in the 1920s and my father watched it in the 1960s. It is now my time. Do you know the hostory of the house? Do you know what lies within the walls of the 657 Boulevard? Why are you here? I will find out. <br> The Watcher -->
       </p>
       <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+      <p class="showComments">
         Show all 2 comments
       </p>
       <!-- //dit profilbillede "Write a comment..."  -->
       <table>
         <tr>
           <td>
-            <img
-              style="
-                margin-left: 6px;
-                margin-top: 0px;
-                margin-bottom: 0px;
-                border-radius: 50%;
-              "
-              src="pictures/A_black_image.jpg.webp"
-              alt="black"
-              height="15px"
-              width="15px"
+            <img class="myProfileImage"
+              
+              src="pictures/Jennifer_Coolidge.jpeg"
+              alt="Jennifer_Coolidge"
+              
             />
           </td>
           <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
+            <p class="showComments"> Write a comment... </p>
           </td>
         </tr>
       </table>
       <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        1 minute ago
-      </p>
+      <p class="time-since-posted">1 minute ago</p>
     </div>
 
     <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    <div>
       <table>
         <tr>
           <td>
             <img
-              style="margin-left: 7px; border-radius: 50%"
+              class="profileImage"
               src="pictures/Pedro_Pascal.webp"
               alt="Joel Miller"
-              height="30px"
-              width="30px"
             />
           </td>
           <td>
-            <p style="font-size: 10px">
+            <p class="imageHeader"> 
               <b>Joel Miller </b> <br />Massachusetts
             </p>
           </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 160px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
+          <td> 
+            <i 
+            style="margin-left: 220px;"
+            class="fa-solid fa-ellipsis fa-lg"
+            aria-hidden="true">
+
+          </i>
           </td>
         </tr>
       </table>
       <!-- //et billede -->
       <img
+      class="instaImage"
         src="pictures/The_last_of_us.jpg"
         alt="The last of us"
-        height="320px"
-        width="320px"
       />
       <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
+      <table>
         <tr>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
+              style="padding: 4px"
+              class="fa-regular fa-heart fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
+              style="padding: 4px"
+              class="fa-regular fa-comment fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
+              style="padding: 4px"
+              class="fa-regular fa-paper-plane fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
+              style="margin-left: 260px; padding-right: 5px; padding-right: 5px"
+              class="fa-regular fa-bookmark fa-lg"
               aria-hidden="true"
             ></i>
           </td>
         </tr>
       </table>
       <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>296 likes</b>
+      <p class="likes">712 likes</p>
+      <p>
+        <!-- //brugernavn + caption -->
       </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+
+      <p class="imageHeader"> 
         <b>Joel Miller: </b>You'd Just Come After Her.
       </p>
       <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+      <p class="showComments">
         Show all 4 comments
       </p>
       <!-- //dit profilbillede "Write a comment..."  -->
       <table>
         <tr>
           <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
+            <img class="myProfileImage"
+            
               src="pictures/Pedro_Pascal.webp"
               alt="Pedro Pascal"
-              height="15px"
-              width="15px"
+              
             />
           </td>
           <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
+            <p class="showComments"> Write a comment... </p>
           </td>
         </tr>
       </table>
       <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        5 hours ago
-      </p>
+      <p class="time-since-posted">5 hours ago</p>
     </div>
 
     <!-- //repeat -->
 
+   
     <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    <div>
       <table>
         <tr>
           <td>
             <img
-              style="margin-left: 7px; border-radius: 50%"
-              src="pictures/Hannah_Montana.jpeg"
-              alt="Hannah_Montana"
-              height="30px"
-              width="30px"
-            />
-          </td>
-          <td>
-            <p style="font-size: 10px"><b>Hannah Montana</b> <br />Texas</p>
-          </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 145px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-          </td>
-        </tr>
-      </table>
-      <!-- //et billede -->
-      <img
-        src="pictures/hannah-montana-friends.jpeg"
-        alt="Hannah Montana cast"
-        height="320px"
-        width="320px"
-      />
-      <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
-        <tr>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-        </tr>
-      </table>
-      <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>974 likes</b>
-      </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>Hannah Montana </b>You get the best of both worlds!
-      </p>
-      <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        Show all 27 comments
-      </p>
-      <!-- //dit profilbillede "Write a comment..."  -->
-      <table>
-        <tr>
-          <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
-              src="pictures/Hannah_Montana.jpeg"
-              alt="Profile picture"
-              height="15px"
-              width="15px"
-            />
-          </td>
-          <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
-          </td>
-        </tr>
-      </table>
-      <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        2 days ago
-      </p>
-    </div>
-
-    <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-      <table>
-        <tr>
-          <td>
-            <img
-              style="margin-left: 7px; border-radius: 50%"
-              src="pictures/Seth_Cohen.jpeg"
-              alt="Seth Cohen"
-              height="30px"
-              width="30px"
-            />
-          </td>
-          <td>
-            <p style="font-size: 10px"><b>Seth Cohen</b> <br />Newport Beach</p>
-          </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 160px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-          </td>
-        </tr>
-      </table>
-      <!-- //et billede -->
-      <img
-        src="pictures/the_oc.jpg"
-        alt="the OC"
-        height="320px"
-        width="320px"
-      />
-      <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
-        <tr>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-        </tr>
-      </table>
-      <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>754 likes</b>
-      </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>Seth Cohen </b> Maybe you’ve got the Summer flu. Maybe <br />
-        you need some Anna–biotics.
-      </p>
-      <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        Show all 22 comments
-      </p>
-      <!-- //dit profilbillede "Write a comment..."  -->
-      <table>
-        <tr>
-          <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
-              src="pictures/Seth_Cohen.jpeg"
-              alt="Seth Cohen"
-              height="15px"
-              width="15px"
-            />
-          </td>
-          <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
-          </td>
-        </tr>
-      </table>
-      <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        1 day ago
-      </p>
-    </div>
-
-    <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-      <table>
-        <tr>
-          <td>
-            <img
-              style="margin-left: 7px; border-radius: 50%"
-              src="pictures/MichaelScott.png"
-              alt="Michael Scott"
-              height="30px"
-              width="30px"
-            />
-          </td>
-          <td>
-            <p style="font-size: 10px"><b>Michel Scott</b> <br />Scranton</p>
-          </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 170px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-          </td>
-        </tr>
-      </table>
-      <!-- //et billede -->
-      <img
-        src="pictures/Blind Guy McS.jpg"
-        alt="the OC"
-        height="320px"
-        width="320px"
-      />
-      <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
-        <tr>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-        </tr>
-      </table>
-      <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>543 likes</b>
-      </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>Michel Scott </b> Blind Guy McSqueezy
-      </p>
-      <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        Show all 22 comments
-      </p>
-      <!-- //dit profilbillede "Write a comment..."  -->
-      <table>
-        <tr>
-          <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
-              src="pictures/MichaelScott.png"
-              alt="Michel Scott"
-              height="15px"
-              width="15px"
-            />
-          </td>
-          <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
-          </td>
-        </tr>
-      </table>
-      <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        1 day ago
-      </p>
-    </div>
-
-    <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-      <table>
-        <tr>
-          <td>
-            <img
-              style="margin-left: 7px; border-radius: 50%"
-              src="pictures/joey_tribbiani.jpeg"
-              alt="joey_tribbiani"
-              height="30px"
-              width="30px"
-            />
-          </td>
-          <td>
-            <p style="font-size: 10px">
-              <b>Joey Tribbiani</b> <br />Central Perk
-            </p>
-          </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 165px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-          </td>
-        </tr>
-      </table>
-      <!-- //et billede -->
-      <img
-        src="pictures/Joey_eats.jpg"
-        alt="friends"
-        height="320px"
-        width="320px"
-      />
-      <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
-        <tr>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-        </tr>
-      </table>
-      <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>543 likes</b>
-      </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>Joey Tribbiani </b> Joey doesn’t share food!
-      </p>
-      <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        Show all 22 comments
-      </p>
-      <!-- //dit profilbillede "Write a comment..."  -->
-      <table>
-        <tr>
-          <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
-              src="pictures/joey_tribbiani.jpeg"
-              alt="Joey Tribbiani"
-              height="15px"
-              width="15px"
-            />
-          </td>
-          <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
-          </td>
-        </tr>
-      </table>
-      <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        1 day ago
-      </p>
-    </div>
-
-    <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-      <table>
-        <tr>
-          <td>
-            <img
-              style="margin-left: 7px; border-radius: 50%"
-              src="pictures/Wednesday.jpg"
-              alt="Wednesday"
-              height="30px"
-              width="30px"
-            />
-          </td>
-          <td>
-            <p style="font-size: 10px">
-              <b>Wednesday Addams</b> <br />Nevermore Academy
-            </p>
-          </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 130px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-          </td>
-        </tr>
-      </table>
-      <!-- //et billede -->
-      <img
-        src="pictures/Wednesday_dance.jpeg"
-        alt="Wednesday_dance"
-        height="320px"
-        width="320px"
-      />
-      <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
-        <tr>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-        </tr>
-      </table>
-      <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>700 likes</b>
-      </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>Wednesday Addams</b> I Find Social Media to be a <br />
-        Soul-Sucking Void of Meaningless Affirmation
-      </p>
-      <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        Show all 76 comments
-      </p>
-      <!-- //dit profilbillede "Write a comment..."  -->
-      <table>
-        <tr>
-          <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
-              src="pictures/Wednesday.jpg"
-              alt="Wednesday"
-              height="15px"
-              width="15px"
-            />
-          </td>
-          <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
-          </td>
-        </tr>
-      </table>
-      <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        2 days ago
-      </p>
-    </div>
-
-    <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-      <table>
-        <tr>
-          <td>
-            <img
-              style="margin-left: 7px; border-radius: 50%"
+            class="profileImage"
               src="pictures/jerry_seinfield.jpeg"
               alt="jerry_seinfield"
-              height="30px"
-              width="30px"
+              
             />
           </td>
           <td>
-            <p style="font-size: 10px">
+            <p class="imageHeader"> 
               <b>Jerry Seinfield</b> <br />New York City
             </p>
           </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 160px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
+          <td> 
+            <i 
+            style="margin-left: 220px;"
+            class="fa-solid fa-ellipsis fa-lg"
+            aria-hidden="true">
+
+          </i>
           </td>
         </tr>
       </table>
       <!-- //et billede -->
       <img
+        class="instaImage"
         src="pictures/seinfield.jpeg"
         alt="Seinfield"
-        height="320px"
-        width="320px"
+        
       />
       <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
+      <table>
         <tr>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
+              style="padding: 4px"
+              class="fa-regular fa-heart fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
+              style="padding: 4px"
+              class="fa-regular fa-comment fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
+              style="padding: 4px"
+              class="fa-regular fa-paper-plane fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
+              style="margin-left: 260px; padding-right: 5px; padding-right: 5px"
+              class="fa-regular fa-bookmark fa-lg"
               aria-hidden="true"
             ></i>
           </td>
         </tr>
       </table>
       <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>2.303 likes</b>
+      <p class="likes">2.032 likes</p>
+      <p>
+        <!-- //brugernavn + caption -->
       </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+
+      <p class="imageHeader"> 
         <b>Jerry Seinfield</b> A two-year-old is kind of like having <br />a
         blender, but you don’t have a top for it.
       </p>
       <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+      <p class="showComments">
         Show all 101 comments
       </p>
       <!-- //dit profilbillede "Write a comment..."  -->
       <table>
         <tr>
           <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
-              src="pictures/jerry_seinfield.jpeg"
-              alt="jerry_seinfield"
-              height="15px"
-              width="15px"
+            <img class="myProfileImage"
+            
+              src="pictures/Pedro_Pascal.webp"
+              alt="Pedro Pascal"
+              
             />
           </td>
           <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
+            <p class="showComments"> Write a comment... </p>
           </td>
         </tr>
       </table>
       <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        3 days ago
-      </p>
+      <p class="time-since-posted">3 days ago</p>
     </div>
     <!--
   HERE IT GETS BLURRY
 -->
 
     <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    <div class="imageHeader">
       <table>
         <tr>
           <td>
@@ -1443,16 +484,15 @@
             />
           </td>
           <td>
-            <p style="font-size: 10px"><b>Tanya McQuoid</b> <br />Sicily</p>
+            <p class="imageHeader"> <b>Tanya McQuoid</b> <br />Sicily</p>
           </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 160px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
+          <td> 
+            <i 
+            style="margin-left: 220px;"
+            class="fa-solid fa-ellipsis fa-lg"
+            aria-hidden="true">
+
+          </i>
           </td>
         </tr>
       </table>
@@ -1462,716 +502,77 @@
         <!-- Our sketch will go here! -->
       </div>
       <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
+      <table>
         <tr>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
+              style="padding: 4px"
+              class="fa-regular fa-heart fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
+              style="padding: 4px"
+              class="fa-regular fa-comment fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
+              style="padding: 4px"
+              class="fa-regular fa-paper-plane fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
+              style="margin-left: 260px; padding-right: 5px; padding-right: 5px"
+              class="fa-regular fa-bookmark fa-lg"
               aria-hidden="true"
             ></i>
           </td>
         </tr>
       </table>
       <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>543 likes</b>
+      <p class="likes">72 likes</p>
+      <p>
+        <!-- //brugernavn + caption -->
       </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+
+      <p class="imageHeader"> 
         <b>Tanya McQuoid </b>You've got this!
       </p>
       <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+      <p class="showComments">
         Show all 23 comments
       </p>
       <!-- //dit profilbillede "Write a comment..."  -->
       <table>
         <tr>
           <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
-              src="pictures/Jennifer_Coolidge.jpeg"
-              alt="Jennifer_Coolidge"
-              height="15px"
-              width="15px"
-            />
-          </td>
-          <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
-          </td>
-        </tr>
-      </table>
-      <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        5 days ago
-      </p>
-    </div>
-
-    <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-      <table>
-        <tr>
-          <td>
-            <img
-              style="margin-left: 7px; border-radius: 50%"
-              src="pictures/A_black_image.jpg.webp"
-              alt="black"
-              height="30px"
-              width="30px"
-            />
-          </td>
-          <td>
-            <p style="font-size: 10px">
-              <b>The Watcher</b> <br />657 Boulevard
-            </p>
-          </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 165px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-          </td>
-        </tr>
-      </table>
-      <!-- //et billede -->
-      <div id="sketch-holder2">
-        <!-- Our sketch will go here! -->
-      </div>
-      <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
-        <tr>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-        </tr>
-      </table>
-      <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>30 likes</b>
-      </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>The Watcher </b> Dearest new neighbor at 657 Boulevard, <br />
-        <br />
-        Allow me to welcome you to the neighborhood. 657 <br />
-        Bouleward has been the subject of my family for...
-        <span style="color: rgb(150, 150, 150)">more</span>
-        <!-- and as it approaches its 110th birtday, I have been put in charge of watching and waiting for its second coming. <br> My grandfather watched the house in the 1920s and my father watched it in the 1960s. It is now my time. Do you know the hostory of the house? Do you know what lies within the walls of the 657 Boulevard? Why are you here? I will find out. <br> The Watcher -->
-      </p>
-      <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        Show all 2 comments
-      </p>
-      <!-- //dit profilbillede "Write a comment..."  -->
-      <table>
-        <tr>
-          <td>
-            <img
-              style="
-                margin-left: 6px;
-                margin-top: 0px;
-                margin-bottom: 0px;
-                border-radius: 50%;
-              "
-              src="pictures/A_black_image.jpg.webp"
-              alt="black"
-              height="15px"
-              width="15px"
-            />
-          </td>
-          <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
-          </td>
-        </tr>
-      </table>
-      <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        1 minute ago
-      </p>
-    </div>
-
-    <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-      <table>
-        <tr>
-          <td>
-            <img
-              style="margin-left: 7px; border-radius: 50%"
-              src="pictures/Pedro_Pascal.webp"
-              alt="Joel Miller"
-              height="30px"
-              width="30px"
-            />
-          </td>
-          <td>
-            <p style="font-size: 10px">
-              <b>Joel Miller </b> <br />Massachusetts
-            </p>
-          </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 160px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-          </td>
-        </tr>
-      </table>
-      <!-- //et billede -->
-
-      <div id="sketch-holder3">
-        <!-- Our sketch will go here! -->
-      </div>
-      <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
-        <tr>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-        </tr>
-      </table>
-      <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>296 likes</b>
-      </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>Joel Miller: </b>You'd Just Come After Her.
-      </p>
-      <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        Show all 4 comments
-      </p>
-      <!-- //dit profilbillede "Write a comment..."  -->
-      <table>
-        <tr>
-          <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
+            <img class="myProfileImage"
+            
               src="pictures/Pedro_Pascal.webp"
               alt="Pedro Pascal"
-              height="15px"
-              width="15px"
+              
             />
           </td>
           <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
+            <p class="showComments"> Write a comment... </p>
           </td>
         </tr>
       </table>
       <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        5 hours ago
-      </p>
+      <p class="time-since-posted">5 days ago</p>
     </div>
+
+    
 
     <!-- //repeat -->
 
     <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-      <table>
-        <tr>
-          <td>
-            <img
-              style="margin-left: 7px; border-radius: 50%"
-              src="pictures/Hannah_Montana.jpeg"
-              alt="Hannah_Montana"
-              height="30px"
-              width="30px"
-            />
-          </td>
-          <td>
-            <p style="font-size: 10px"><b>Hannah Montana</b> <br />Texas</p>
-          </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 145px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-          </td>
-        </tr>
-      </table>
-      <!-- //et billede -->
-
-      <div id="sketch-holder4">
-        <!-- Our sketch will go here! -->
-      </div>
-      <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
-        <tr>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-        </tr>
-      </table>
-      <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>974 likes</b>
-      </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>Hannah Montana </b>You get the best of both worlds!
-      </p>
-      <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        Show all 27 comments
-      </p>
-      <!-- //dit profilbillede "Write a comment..."  -->
-      <table>
-        <tr>
-          <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
-              src="pictures/Hannah_Montana.jpeg"
-              alt="Profile picture"
-              height="15px"
-              width="15px"
-            />
-          </td>
-          <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
-          </td>
-        </tr>
-      </table>
-      <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        2 days ago
-      </p>
-    </div>
-
-    <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-      <table>
-        <tr>
-          <td>
-            <img
-              style="margin-left: 7px; border-radius: 50%"
-              src="pictures/MichaelScott.png"
-              alt="Michael Scott"
-              height="30px"
-              width="30px"
-            />
-          </td>
-          <td>
-            <p style="font-size: 10px"><b>Michel Scott</b> <br />Scranton</p>
-          </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 170px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-          </td>
-        </tr>
-      </table>
-      <!-- //et billede -->
-
-      <div id="sketch-holder5">
-        <!-- Our sketch will go here! -->
-      </div>
-
-      <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
-        <tr>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-        </tr>
-      </table>
-      <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>543 likes</b>
-      </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>Michel Scott </b> Blind Guy McSqueezy
-      </p>
-      <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        Show all 22 comments
-      </p>
-      <!-- //dit profilbillede "Write a comment..."  -->
-      <table>
-        <tr>
-          <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
-              src="pictures/MichaelScott.png"
-              alt="Michel Scott"
-              height="15px"
-              width="15px"
-            />
-          </td>
-          <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
-          </td>
-        </tr>
-      </table>
-      <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        1 day ago
-      </p>
-    </div>
-
-    <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    <div class="imageHeader">
       <table>
         <tr>
           <td>
@@ -2184,18 +585,17 @@
             />
           </td>
           <td>
-            <p style="font-size: 10px">
+            <p class="imageHeader"> 
               <b>Joey Tribbiani</b> <br />Central Perk
             </p>
           </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 165px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
+          <td> 
+            <i 
+            style="margin-left: 220px;"
+            class="fa-solid fa-ellipsis fa-lg"
+            aria-hidden="true">
+
+          </i>
           </td>
         </tr>
       </table>
@@ -2205,295 +605,95 @@
         <!-- Our sketch will go here! -->
       </div>
       <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
+      <table >
         <tr>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
+              style="padding: 4px"
+              class="fa-regular fa-heart fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
+              style="padding: 4px"
+              class="fa-regular fa-comment fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
+              style="padding: 4px"
+              class="fa-regular fa-paper-plane fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
+              style="margin-left: 260px; padding-right: 5px; padding-right: 5px"
+              class="fa-regular fa-bookmark fa-lg"
               aria-hidden="true"
             ></i>
           </td>
         </tr>
       </table>
       <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>543 likes</b>
+      <p class="likes">18 likes</p>
+      <p>
+        <!-- //brugernavn + caption -->
       </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+
+      <p class="imageHeader"> 
         <b>Joey Tribbiani </b> Joey doesn’t share food!
       </p>
       <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+      <p class="showComments">
         Show all 22 comments
       </p>
       <!-- //dit profilbillede "Write a comment..."  -->
       <table>
         <tr>
           <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
-              src="pictures/joey_tribbiani.jpeg"
-              alt="Joey Tribbiani"
-              height="15px"
-              width="15px"
+            <img class="myProfileImage"
+            
+              src="pictures/Pedro_Pascal.webp"
+              alt="Pedro Pascal"
+              
             />
           </td>
           <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
+            <p class="showComments"> Write a comment... </p>
           </td>
         </tr>
       </table>
       <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        1 day ago
-      </p>
+      <p class="time-since-posted">1 day ago</p>
     </div>
 
-    <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-      <table>
-        <tr>
-          <td>
-            <img
-              style="margin-left: 7px; border-radius: 50%"
-              src="pictures/Wednesday.jpg"
-              alt="Wednesday"
-              height="30px"
-              width="30px"
-            />
-          </td>
-          <td>
-            <p style="font-size: 10px">
-              <b>Wednesday Addams</b> <br />Nevermore Academy
-            </p>
-          </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 130px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-          </td>
-        </tr>
-      </table>
-      <!-- //et billede -->
-
-      <div id="sketch-holder7">
-        <!-- Our sketch will go here! -->
-      </div>
-
-      <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
-        <tr>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-          <td>
-            <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
-              aria-hidden="true"
-            ></i>
-          </td>
-        </tr>
-      </table>
-      <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>700 likes</b>
-      </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>Wednesday Addams</b> I Find Social Media to be a <br />
-        Soul-Sucking Void of Meaningless Affirmation
-      </p>
-      <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        Show all 76 comments
-      </p>
-      <!-- //dit profilbillede "Write a comment..."  -->
-      <table>
-        <tr>
-          <td>
-            <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
-              src="pictures/Wednesday.jpg"
-              alt="Wednesday"
-              height="15px"
-              width="15px"
-            />
-          </td>
-          <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
-            >
-              Write a comment...
-            </p>
-          </td>
-        </tr>
-      </table>
-      <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        2 days ago
-      </p>
-    </div>
 
     <!-- //et profilbilllede + brugernavn, tre prikker -->
-    <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    <div class="imageHeader">
       <table>
         <tr>
           <td>
             <img
-              style="margin-left: 7px; border-radius: 50%"
+              class="profileImage"
               src="pictures/jerry_seinfield.jpeg"
               alt="jerry_seinfield"
-              height="30px"
-              width="30px"
             />
           </td>
           <td>
-            <p style="font-size: 10px">
+            <p class="imageHeader"> 
               <b>Jerry Seinfield</b> <br />New York City
             </p>
           </td>
-          <td style="font-size: 5px">
-            <i
-              style="margin-left: 160px"
-              class="fa fa-circle"
-              aria-hidden="true"
-            ></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
+          <td> 
+            <i 
+            style="margin-left: 220px;"
+            class="fa-solid fa-ellipsis fa-lg"
+            aria-hidden="true">
+
+          </i>
           </td>
         </tr>
       </table>
@@ -2503,71 +703,50 @@
         <!-- Our sketch will go here! -->
       </div>
       <!-- //et hjerte, en kommentar, en papirflyver, 3 prikker, en gem -->
-      <table style="margin-left: 2px; padding-bottom: 0px">
+      <table>
         <tr>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-heart-o"
+              style="padding: 4px"
+              class="fa-regular fa-heart fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-comment-o"
+              style="padding: 4px"
+              class="fa-regular fa-comment fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="padding-left: 3px"
-              class="fa fa-paper-plane-o"
+              style="padding: 4px"
+              class="fa-regular fa-paper-plane fa-lg"
               aria-hidden="true"
             ></i>
           </td>
           <td>
             <i
-              style="margin-left: 210px; padding-right: 3px; padding-right: 3px"
-              class="fa fa-bookmark-o"
+              style="margin-left: 260px; padding-right: 5px; padding-right: 5px"
+              class="fa-regular fa-bookmark fa-lg"
               aria-hidden="true"
             ></i>
           </td>
         </tr>
       </table>
       <!-- // xx "likes" -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
-        <b>2.303 likes</b>
+      <p class="likes">1289 likes</p>
+      <p>
+        <!-- //brugernavn + caption -->
       </p>
-      <!-- //brugernavn + caption -->
-      <p
-        style="
-          font-size: 10px;
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+
+      <p class="imageHeader"> 
         <b>Jerry Seinfield</b> A two-year-old is kind of like having <br />a
         blender, but you don’t have a top for it.
       </p>
       <!-- //show all comments -->
-      <p
-        style="
-          font-size: 10px;
-          color: rgb(150, 150, 150);
-          padding-left: 7px;
-          padding-top: 0px;
-          padding-bottom: 0px;
-        "
-      >
+      <p class="showComments">
         Show all 101 comments
       </p>
       <!-- //dit profilbillede "Write a comment..."  -->
@@ -2575,28 +754,13 @@
         <tr>
           <td>
             <img
-              style="
-                margin-left: 6px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                border-radius: 50%;
-              "
+              class="myProfileImage"
               src="pictures/jerry_seinfield.jpeg"
               alt="jerry_seinfield"
-              height="15px"
-              width="15px"
             />
           </td>
           <td>
-            <p
-              style="
-                color: rgb(150, 150, 150);
-                font-size: 10px;
-                padding-left: 5x;
-                padding-bottom: 0px;
-                padding-top: 0px;
-              "
-              ;
+            <p class="showComments"
             >
               Write a comment...
             </p>
@@ -2604,17 +768,7 @@
         </tr>
       </table>
       <!-- //The amounth of hours or days since the photo was posted  -->
-      <p
-        style="
-          color: rgb(150, 150, 150);
-          font-size: 8px;
-          padding-left: 10px;
-          padding-top: 0px;
-        "
-        ;
-      >
-        3 days ago
-      </p>
+      <p class="time-since-posted">3 days ago</p>
     </div>
   </body>
 </html>
