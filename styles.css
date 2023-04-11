@@ -1,107 +1,161 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 #screen {
-    width: 380px;
-    background-color: whitesmoke;
-    margin: auto;
-    padding-top: 18px;
-    padding-bottom: 100px;
+  width: 390px;
+  background-color: whitesmoke;
+  margin: auto;
+  padding-top: 18px;
+  padding-bottom: 100px;
 }
 
 #userInputTitle {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 10px;
 }
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    padding-bottom: 4px;
-    margin-left: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  padding-bottom: 4px;
+  margin-left: 12px;
 }
 
 h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    padding-bottom: 4px;
-    margin-left: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding-bottom: 4px;
+  margin-left: 12px;
 }
 
 h5 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    padding-bottom: 4px;
-    margin-left: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  padding-bottom: 4px;
+  margin-left: 12px;
 }
 
-p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 12;
-    padding-bottom: 4px;
-    margin-left: 12px;
-}
+/* p {
+  font-family: "Verdana", sans-serif;
+  font-weight: 300;
+  font-size: 10;
+  padding-bottom: 4px;
+  margin-left: 12px;
+} */
 
 .altActivityImg {
-    width: 356px;
-    height: 200px;
-    object-fit: cover;
-    padding-inline: 12px;
+  width: 356px;
+  height: 200px;
+  object-fit: cover;
+  padding-inline: 12px;
 }
 
 #slider {
-    padding: 10px;
-    margin-left: 10px;
-    background: #fcfcfc;
-    width: 330px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 5px 5px #7E6D5766;
+  padding: 10px;
+  margin-left: 10px;
+  background: #fcfcfc;
+  width: 330px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 5px 5px #7e6d5766;
 }
 
 #slider label {
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    padding-left: 5px;
-    color: black;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding-left: 5px;
+  color: black;
 }
 
 #slider input[type="range"] {
-    margin-left: 15px;
-    width: 320px;
-    height: 2px;
-    background: black;
-    border: none;
-    outline: none;
+  margin-left: 15px;
+  width: 320px;
+  height: 2px;
+  background: black;
+  border: none;
+  outline: none;
 }
 
 #userGoals {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    padding-left: 10px;
-    margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding-left: 10px;
+  margin-bottom: 10px;
 }
 
 #goalsDiv {
-    padding-left: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
+  padding-left: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 #saveBtn {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
+  font-family: "Verdana", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 #saveDiv {
-    padding-left: 15px;
-    padding-top: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.imageHeader {
+  font-family: "Verdana", sans-serif;
+  font-size: 9px;
+  padding-left: 6px;
+}
+
+.time-since-posted {
+  font-family: "Verdana", sans-serif;
+  color: rgb(150, 150, 150);
+  font-size: 8px;
+  padding-left: 6px;
+  padding-top: 0px;
+}
+
+
+.showComments {
+    font-family: "Verdana", sans-serif;
+    color: rgb(150, 150, 150);
+    font-size: 9px;
+    padding-left: 6px;
+    padding-top: 0px;
+}
+
+.likes {
+  font-family: "Verdana", sans-serif;
+  font-size: 10px;
+  font-weight: "400";
+  padding-left: 6px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.profileImage {
+  height: 30px;
+  width: 30px;
+  margin-left: 2px;
+  border-radius: 50%;
+}
+
+.myProfileImage {
+  margin-left: 4px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+}
+
+.instaImage {
+    height: 390px;
+    width: 390px;
 }
